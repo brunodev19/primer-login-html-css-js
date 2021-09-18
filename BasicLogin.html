@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html >
 <head>
+<meta charset = "UTF-8">
     <title>Login basic</title>
+
+    <script type = "text/javascript">
+        function validar()
+        {
+            var usuario = document.getElementById("var_usu").value;
+            var password = document.getElementById("var_pass").value;
+            //console.log(usuario);
+            //console.log(password);
+            if (usuario == "bruno" && password == "1234") {
+                //console.log("credenciales correctas");
+                alert("credenciales correctas");
+            } else {
+               // console.log("credenciales incorrectas");
+               alert("credenciales incorrectas");
+            }
+    
+        }
+    
+    
+    
+    </script>
 </head>
 <body>
-    <table>
-        <tr>
-           <td><label>Usuario</label></td>
-        </tr>
+        <table>
+            <tr>
+                <td><label>Usuario:</label></td> <td><input type = "text" name = "usuario" id = "var_usu"></td>
+            </tr>
+            <tr>
+                <td><label>Contraseña: </label></td> <td><input type = "password" name = "pass" id = "var_pass"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value = "verificar" onclick="validar()"></td>
+            </tr>
 
-    </table>
-    <input type = "text" name = "usuario" id = "usuario">
-    <input type = "password" name = "pass" id = "pass">
+        </table>
+    
+    
 </body>
 </html>
